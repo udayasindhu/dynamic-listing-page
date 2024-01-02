@@ -2,7 +2,7 @@
 
 Field Service Management with dynamic listings page (Listing Application).
 
-**Used**
+**Technologies Used**
 Angular 14, Material UI, Tailwind CSS, and Heroicons
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
