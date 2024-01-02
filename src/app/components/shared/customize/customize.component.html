@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="header">
+        <h3 class="!mb-0">Customize (Select Columns to Display)</h3>
+        <img src="{{closeIcon}}" alt="{{closeIcon}}" class="w-5 h-5 cursor-pointer float-right mt-[-30px]"
+            (click)="closeModal()">
+    </div>
+    <div class="fields container mt-3">
+        <section>
+            <mat-checkbox [checked]="allSelected" [indeterminate]="isAnySelected" (change)="masterToggle($event.checked)">
+                Select All
+            </mat-checkbox>
+            <ul>
+                <li *ngFor="let header of headers">
+                    <mat-checkbox [checked]="isSelected(header)" (change)="performAction(header)">
+                        {{header}}
+                    </mat-checkbox>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+    <div class="flex space-x-10 mt-2 justify-center">
+        <fsm-button mat-icon-button class="justify-center" (click)="applyCustomization()"
+            buttonText="Apply"></fsm-button>
+    </div>
+</div>

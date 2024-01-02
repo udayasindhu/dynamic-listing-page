@@ -1,0 +1,8 @@
+<div>
+    <span [ngClass]="getContentStyle()">
+        {{ content }}
+    </span>
+    <p *ngIf="isCustomer" class="text-gray-600">
+        {{ customerAddress }}
+    </p>
+</div>

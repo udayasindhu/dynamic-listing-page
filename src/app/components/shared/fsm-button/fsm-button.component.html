@@ -1,0 +1,9 @@
+<button
+    class="flex items-center justify-center space-x-2 w-32 h-8 mt-3 mr-1 bg-white border border-slate-300 rounded">
+    <ng-container *ngIf="buttonIcon">
+        <img [src]="buttonIcon" alt="{{buttonText}}" class="w-6 h-6" />
+    </ng-container>
+    <span *ngIf="buttonText" class="">
+        {{buttonText}}
+    </span>
+</button>

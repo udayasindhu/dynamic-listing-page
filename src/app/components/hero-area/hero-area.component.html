@@ -1,0 +1,9 @@
+<div class="hero-area p-4 border-b">
+    <div class="breadcrumbs text-lg text-gray-700">
+        <ng-container *ngFor="let crumb of breadcrumbs; let i = index; let last = last">
+            <span class="{{i !== 0 ? 'bg-violet-200 text-violet-700 px-4 py-1 rounded-full text-sm' : ''}}">{{ crumb
+                }}</span>
+            <span *ngIf="!last" class="mx-1">&nbsp;</span>
+        </ng-container>
+    </div>
+</div>

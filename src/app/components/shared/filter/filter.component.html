@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="header">
+        <h3 class="!mb-0">Filter</h3>
+        <img src="{{closeIcon}}" alt="{{closeIcon}}" class="w-5 h-5 cursor-pointer float-right mt-[-30px]" (click)="closeModal()">
+    </div>
+    <div class="fields container mt-3">
+        <mat-form-field class="w-full">
+            <mat-label>Filter By:</mat-label>
+            <mat-select name="filterBy" [(ngModel)]="filterBy" (selectionChange)="onFilterByChange()">
+                <mat-option *ngFor="let option of filterOptions" [value]="option.value">
+                    {{ option.displayName }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field> &nbsp;
+        <mat-form-field class="w-full">
+            <mat-label>Values:</mat-label>
+            <mat-select name="values" [(ngModel)]="filterValue">
+                <mat-option *ngFor="let filterValue of filterValues" [value]="filterValue">
+                    {{ filterValue }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="flex space-x-10 mt-2">
+        <fsm-button mat-icon-button class="justify-center" (click)="resetFilter()" buttonText="Clear"></fsm-button>
+        <fsm-button mat-icon-button class="justify-center" (click)="applyFilter()" buttonText="Apply"></fsm-button>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<mat-sidenav-container class="min-h-screen">
+    <mat-sidenav #sidenav mode="side" [opened]="true" class="w-14 border-r shadow-md bg-sidenav">
+        <mat-nav-list>
+            <a mat-list-item *ngFor="let navItem of navItems" [routerLink]="[navItem.label.toLowerCase()]"
+                routerLinkActive="active" class="focus:hover:bg-sidenavMain rounded-xl">
+                <img [src]="navItem.iconPath" alt="{{ navItem.label }}" class="w-8 h-7" />
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="ml-20">
+        <div class="sidenav-content">
+            <hero-area></hero-area>
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
