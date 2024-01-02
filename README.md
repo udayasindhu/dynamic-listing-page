@@ -43,6 +43,7 @@ nav. For example, here Jobs link will be there.
 14. The content of the data should be sortable based on the column name.
 15. Columns should be sorted based on the sorted flag received from the backend.
 16. There should be an option to check and uncheck for multiple columns.
+
 **CODE FLOW**
 On launching the application, the Sidenav component will be loaded. On clicking one of the
 menus on Sidenav, the related component will be loaded, where it’ll have a hero area and the
@@ -65,6 +66,9 @@ properties, Row Properties, and Filter options. Meta properties will be built by
 jobs-meta response and Row Properties will be built by using the jobs-data response by
 doing specific operations like parsing the values by using the given key and combining
 multiple values.
+
+**FUNCTIONALITY**
+https://github.com/udayasindhu/dynamic-listing-page/assets/67787019/ee517401-f453-49de-8cc6-ac9d4b89ef7c 
 
 ## Code scaffolding
 
